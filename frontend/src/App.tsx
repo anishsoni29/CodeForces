@@ -1,27 +1,29 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { Signin } from "./components/Signin";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
-import { RecoilRoot, useRecoilState, useSetRecoilState } from "recoil";
+import { RecoilRoot, useRecoilState } from "recoil";
 import { userAtom } from "./store/atoms/user";
 import { Topbar } from "./components/Topbar";
+import { ProblemList } from "./components/ProblemList";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { About } from "./components/About";
+import { Landing } from "./components/Landing";
+import { Submissions } from "./components/Submissions";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDYoyDIZTMeu1VSETFSjGwh41N2Wril2XQ",
-  authDomain: "leetcode-clone-5a183.firebaseapp.com",
-  projectId: "leetcode-clone-5a183",
-  storageBucket: "leetcode-clone-5a183.appspot.com",
-  messagingSenderId: "913678835850",
-  appId: "1:913678835850:web:5ff69c40e82e7bc9064d73",
-  measurementId: "G-WXKVQXN3KE",
+  apiKey: "AIzaSyAjjsbl9eSDWSmfrWpFPap2uGuwONZ2N4g",
+  authDomain: "leetcode-clone-c39eb.firebaseapp.com",
+  projectId: "leetcode-clone-c39eb",
+  storageBucket: "leetcode-clone-c39eb.appspot.com",
+  messagingSenderId: "66814187798",
+  appId: "1:66814187798:web:a6b3702e191448722dd837",
+  measurementId: "G-ET5FNB5WCN",
 };
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-
 export const auth = getAuth(app);
-
 function App() {
   return (
     <RecoilRoot>
@@ -32,6 +34,13 @@ function App() {
 
 function StoreApp() {
   const [user, setUser] = useRecoilState(userAtom);
+
+  const problemList = [
+    { id: "1", problemName: "Two Sum", tags: ["Array", "Hash Table"] },
+    { id: "2", problemName: "Reverse String", tags: ["String"] },
+    { id: "3", problemName: "Palindrome Check", tags: ["String"] },
+    { id: "4", problemName: "Merge Intervals", tags: ["Array", "Sorting"] },
+  ];
 
   useEffect(() => {
     onAuthStateChanged(auth, function (user) {
@@ -45,31 +54,45 @@ function StoreApp() {
       } else {
         setUser({
           loading: false,
-        }),
-          console.log("There is no logged user");
+        });
+        // No user is signed in.
+        console.log("There is no logged in user");
       }
     });
   }, []);
 
   if (user.loading) {
-    return <div>loading...</div>;
+    return <div>loading ...</div>;
   }
+
   if (!user.user) {
     return (
       <div>
-        {" "}
-        <Signin />{" "}
+        <Signin />
       </div>
     );
   }
 
   return (
-    <>
-      <Topbar></Topbar>
-    </>
+    <div className="place-items-center grid">
+      <div className="max-w-screen-lg w-full">
+        <Router>
+          <Topbar />
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/activity" element={<Submissions />} />
+            <Route
+              path="/problems"
+              element={<ProblemList problemList={problemList} />}
+            />
+          </Routes>
+        </Router>
+        {/* <Leaderboard /> */}
+        {/* <Leaderboard leaderboard={leaderboardData} /> */}
+      </div>
+    </div>
   );
-
-  // return <>You are logged in as {user.user.email}</>;
 }
 
 export default App;
