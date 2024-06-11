@@ -16,7 +16,7 @@ const topbarItems = [
     route: "/about",
   },
   {
-    title: "Acitivity",
+    title: "Activity",
     route: "/activity",
   },
   {
