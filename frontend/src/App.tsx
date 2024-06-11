@@ -18,6 +18,7 @@ const app = initializeApp(firebaseConfig);
 // ----------------------------------------------
 import { useState } from "react";
 import { Landing } from "./components/Landing";
+import { Signin } from "./components/Signin";
 import "./App.css";
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <>
-      <Landing />
+      <Signin />
     </>
   );
 }
