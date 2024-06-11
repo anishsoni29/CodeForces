@@ -93,7 +93,7 @@ function List({ problemId, timestamp, status, username }: ListProps) {
           {status === "AC" ? (
             <img style={{ height: 25 }} src={"/check.png"} />
           ) : (
-            <img style={{ height: 25 }} src="/cross.webp" />
+            <img style={{ height: 25 }} src="/red_cross.png" />
           )}
         </div>
       </div>
