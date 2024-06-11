@@ -54,7 +54,7 @@ export const Signin = () => {
                   <p className="font-normal text-2xl text-gray-900">Welcome</p>
 
                   <p className="font-light text-sm text-gray-600">
-                    Log in to continue to DailyCode.
+                    Log in to continue to HorseCode.
                   </p>
                   <button
                     type="submit"
