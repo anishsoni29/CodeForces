@@ -23,6 +23,7 @@ export const Signin = () => {
         }
         const token = credential.accessToken;
         const user = result.user;
+        console.log(user);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -34,19 +35,12 @@ export const Signin = () => {
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="email"
-        onChange={(e) => {
-          setEmail(e.target.value);
-        }}
-      />
       <button
         onClick={(e) => {
           onSignin();
         }}
       >
-        Signup
+        Login with Google
       </button>
     </div>
   );
