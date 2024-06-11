@@ -30,7 +30,7 @@ export const Signin = () => {
     <div className="flex bg-black">
       <div className="w-full md:w-2/5 bg-black flex justify-center items-center h-screen max-sm:hidden max-md:hidden">
         <div>
-          <h1 className="text-4xl font-bold mb-4 text-white">Daily Code</h1>
+          <h1 className="text-4xl font-bold mb-4 text-white">Horse Code</h1>
           <div className="grid grid-cols-3 gap-4">
             {[...Array(9)].map((_, index) => (
               <div key={index} className="opacity-50">
