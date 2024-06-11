@@ -43,7 +43,7 @@ export const ProblemList = ({
             </div>
             <div className="w-1/3 text-lg">
               <span className="text-gray-500">Last submission: </span>{" "}
-              {"Anirudh"}
+              {"Anish"}
             </div>
           </div>
         ))}
