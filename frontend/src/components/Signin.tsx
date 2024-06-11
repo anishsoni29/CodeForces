@@ -3,7 +3,7 @@ import { useState } from "react";
 import { app } from "../utils/firebase";
 
 const actionCodeSettings = {
-  url: "https://localhost:3000",
+  url: "https://localhost:5173",
   handleCodeInApp: true,
 };
 
@@ -21,6 +21,8 @@ export const Signin = () => {
         alert("sent not sent");
         const errorCode = error.code;
         const errorMessage = error.message;
+        console.log(errorMessage, errorCode);
+
         // ...
       });
   }
