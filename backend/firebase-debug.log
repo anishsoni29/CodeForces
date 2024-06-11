@@ -1,0 +1,73 @@
+[debug] [2024-06-11T22:31:16.811Z] ----------------------------------------------------------------------
+[debug] [2024-06-11T22:31:16.817Z] Command:       /opt/homebrew/Cellar/node/22.0.0/bin/node /opt/homebrew/bin/firebase init
+[debug] [2024-06-11T22:31:16.817Z] CLI Version:   13.11.2
+[debug] [2024-06-11T22:31:16.817Z] Platform:      darwin
+[debug] [2024-06-11T22:31:16.817Z] Node Version:  v22.0.0
+[debug] [2024-06-11T22:31:16.818Z] Time:          Wed Jun 12 2024 02:31:16 GMT+0400 (Mauritius Standard Time)
+[debug] [2024-06-11T22:31:16.818Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-11T22:31:16.824Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-11T22:31:16.824Z] > authorizing via signed-in user (sonianish441@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/anishsoni/Desktop/CodeForces/backend
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-06-11T22:33:13.848Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-06-11T22:33:14.717Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-06-11T22:33:14.718Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project leetcode-clone-5a183 (leetcode-clone) 
+[info] 
+=== Functions Setup
+[debug] [2024-06-11T22:33:18.027Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-11T22:33:18.027Z] > authorizing via signed-in user (sonianish441@gmail.com)
+[debug] [2024-06-11T22:33:18.028Z] [iam] checking project leetcode-clone-5a183 for permissions ["firebase.projects.get"]
+[debug] [2024-06-11T22:33:18.028Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/leetcode-clone-5a183:testIamPermissions [none]
+[debug] [2024-06-11T22:33:18.028Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/leetcode-clone-5a183:testIamPermissions x-goog-quota-user=projects/leetcode-clone-5a183
+[debug] [2024-06-11T22:33:18.029Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/leetcode-clone-5a183:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-06-11T22:33:19.878Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/leetcode-clone-5a183:testIamPermissions 200
+[debug] [2024-06-11T22:33:19.879Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/leetcode-clone-5a183:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-06-11T22:33:19.880Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-06-11T22:33:19.880Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/leetcode-clone-5a183
+[debug] [2024-06-11T22:33:19.883Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-06-11T22:33:19.883Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/leetcode-clone-5a183
+[debug] [2024-06-11T22:33:21.993Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/runtimeconfig.googleapis.com 200
+[debug] [2024-06-11T22:33:21.993Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-06-11T22:33:21.995Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/cloudfunctions.googleapis.com 200
+[debug] [2024-06-11T22:33:21.995Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2024-06-11T22:33:21.996Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2024-06-11T22:33:21.996Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/leetcode-clone-5a183
+[debug] [2024-06-11T22:33:23.894Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2024-06-11T22:33:23.894Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2024-06-11T22:33:33.897Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-06-11T22:33:33.898Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/leetcode-clone-5a183
+[debug] [2024-06-11T22:33:35.944Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/cloudfunctions.googleapis.com 200
+[debug] [2024-06-11T22:33:35.944Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/leetcode-clone-5a183/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/.eslintrc.js 
+[info] ✔  Wrote functions/tsconfig.json 
+[info] ✔  Wrote functions/tsconfig.dev.json 
+[info] ✔  Wrote functions/src/index.ts 
+[info] ✔  Wrote functions/.gitignore 
