@@ -1,5 +1,6 @@
 import { getAuth, sendSignInLinkToEmail } from "firebase/auth";
 import { useState } from "react";
+import { app } from "../utils/firebase";
 
 const actionCodeSettings = {
   url: "https://localhost:3000",
@@ -7,7 +8,7 @@ const actionCodeSettings = {
 };
 
 export const Signin = () => {
-  const auth = getAuth();
+  const auth = getAuth(app);
   const [email, setEmail] = useState("");
 
   async function onSignin() {
