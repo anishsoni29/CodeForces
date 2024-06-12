@@ -1,104 +1,92 @@
-export const Landing = () => {
+import { useState } from 'react'
+import { Dialog, DialogPanel } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Features from './Features'
+import { Statistics } from './Statistics'
+
+
+export default function Landing() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
-      {/* Hero Section */}
-      <section className="flex-1 flex flex-col justify-center items-center text-center bg-slate-600 text-white">
-        <h1 className="text-5xl font-bold mb-4">Welcome User</h1>
-        <p className="text-lg mb-8">
-          Your solution for efficient and productive coding challenges.
-        </p>
-        <a
-          href="#"
-          className="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition duration-300"
+    <div className="bg-white min-h-screen flex flex-col">
+      <header className="absolute inset-x-0 top-0 z-50">
+        <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+          <div className="fixed inset-0 z-50" />
+          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="flex items-center justify-between">
+              <button
+                type="button"
+                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span className="sr-only">Close menu</span>
+                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
+          </DialogPanel>
+        </Dialog>
+      </header>
+
+      <div className="relative flex-grow isolate px-6 pt-14 lg:px-8">
+        <div
+          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          aria-hidden="true"
         >
-          Get Started
-        </a>
-      </section>
-
-      {/* Features Section */}
-      <section className="container mx-auto px-6 py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold">Features</h2>
-          <p className="text-gray-600 mt-4">
-            Our platform offers a variety of features to help you succeed.
-          </p>
+          <div
+            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style={{
+              clipPath:
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            }}
+          />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="bg-white p-6 rounded-lg shadow">
-            <div className="text-indigo-600 mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-12 h-12 mx-auto"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 10H5m14 4H5m4 4H5m8-8h2a2 2 0 012 2v2a2 2 0 01-2 2h-2v4m0-4H7m8-4H7m4-4H7m4 4v4m-4-4V8a2 2 0 012-2h2m4 4v4m-4 4H9m-4 4h10"
-                />
-              </svg>
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+              Announcing our next round of funding.{' '}
+              <a href="#" className="font-semibold text-indigo-600">
+                <span className="absolute inset-0" aria-hidden="true" />
+                Read more <span aria-hidden="true">&rarr;</span>
+              </a>
             </div>
-            <h3 className="text-2xl font-semibold mb-2">Problems</h3>
-            <p className="text-gray-600">
-              Solve a variety of problems to improve your coding skills.
-            </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow">
-            <div className="text-indigo-600 mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-12 h-12 mx-auto"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M12 8c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm0-6C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2zM9.293 9.293a1 1 0 011.414 0L12 10.586l1.293-1.293a1 1 0 011.414 1.414L13.414 12l1.293 1.293a1 1 0 01-1.414 1.414L12 13.414l-1.293 1.293a1 1 0 01-1.414-1.414L10.586 12l-1.293-1.293a1 1 0 010-1.414z"
-                />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-semibold mb-2">Activity</h3>
-            <p className="text-gray-600">
-              Indulge in the insightful activity feed to track your progress.
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Data to enrich your online business
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
+              fugiat veniam occaecat fugiat aliqua.
             </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow">
-            <div className="text-indigo-600 mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-12 h-12 mx-auto"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <a
+                href="#"
+                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M12 8c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm0-6C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2zM9.293 9.293a1 1 0 011.414 0L12 10.586l1.293-1.293a1 1 0 011.414 1.414L13.414 12l1.293 1.293a1 1 0 01-1.414 1.414L12 13.414l-1.293 1.293a1 1 0 01-1.414-1.414L10.586 12l-1.293-1.293a1 1 0 010-1.414z"
-                />
-              </svg>
+                Get started
+              </a>
+              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                Learn more <span aria-hidden="true">→</span>
+              </a>
             </div>
-            <h3 className="text-2xl font-semibold mb-2">Leaderboard</h3>
-            <p className="text-gray-600">
-              Get your rank amongs other users and compete with them.
-            </p>
           </div>
         </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-6">
-        <div className="container mx-auto text-center">
-          &copy; 2024 Horse Code. All rights reserved.
+        <div
+          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+          aria-hidden="true"
+        >
+          <div
+            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            style={{
+              clipPath:
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            }}
+          />
         </div>
-      </footer>
+        <Features />
+        <Statistics />
+      </div>
     </div>
-  );
-};
+  )
+}

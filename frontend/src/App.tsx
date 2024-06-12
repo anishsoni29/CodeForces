@@ -8,8 +8,21 @@ import { Topbar } from "./components/Topbar";
 import { ProblemList } from "./components/ProblemList";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { About } from "./components/About";
-import { Landing } from "./components/Landing";
+import Landing from "./components/Landing";
+import Features from "./components/Features";
 import { Submissions } from "./components/Submissions";
+import { Statistics } from "./components/Statistics";
+
+<div>
+      <h1>Your App</h1>
+      <iframe
+        src="frontend/src/components/Landing1.html"
+        title="Landing Page"
+        width="100%"
+        height="600px"
+        frameBorder="0"
+      ></iframe>
+    </div>
 
 const firebaseConfig = {
   apiKey: "AIzaSyAjjsbl9eSDWSmfrWpFPap2uGuwONZ2N4g",
@@ -80,8 +93,10 @@ function StoreApp() {
           <Topbar />
           <Routes>
             <Route path="/" element={<Landing />} />
+            <Route path="/features" element={<Features />} />
             <Route path="/about" element={<About />} />
             <Route path="/activity" element={<Submissions />} />
+            <Route path="/statistics" element={<Statistics />} />
             <Route
               path="/problems"
               element={<ProblemList problemList={problemList} />}
