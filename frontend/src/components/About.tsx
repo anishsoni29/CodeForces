@@ -1,6 +1,7 @@
 export const About = () => {
   return (
-    <div className="bg-white border border-gray-200 shadow-lg p-4 space-y-6 mb-4 mt-2">
+    <div className="flex items-center justify-center h-screen">
+       <div className="bg-white border border-gray-200 shadow-lg p-4 space-y-6 mb-4 mt-2">
       <h1 className="text-xl font-medium my-2">About</h1>
       <p>
         Welcome to Horse Code your go-to platform for honing coding skills and
@@ -17,6 +18,7 @@ export const About = () => {
       <p className="italic">
         "If code isn't a daily adventure, then what is?" - Horse Code Platform
       </p>
+    </div>
     </div>
   );
 };

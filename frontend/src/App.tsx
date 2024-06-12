@@ -12,6 +12,7 @@ import Landing from "./components/Landing";
 import Features from "./components/Features";
 import { Submissions } from "./components/Submissions";
 import { Statistics } from "./components/Statistics";
+import Loader from "./components/Loader";
 
 <div>
       <h1>Your App</h1>
@@ -75,7 +76,9 @@ function StoreApp() {
   }, []);
 
   if (user.loading) {
-    return <div>loading ...</div>;
+    return <div>
+      <Loader></Loader>
+    </div>
   }
 
   if (!user.user) {

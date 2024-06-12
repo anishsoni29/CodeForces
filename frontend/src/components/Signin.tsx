@@ -73,7 +73,7 @@ export const Signin = () => {
             </div>
             <div className="p-2 text-center">
               <p className="text-gray-400">
-                New to Horse Code?{" "}
+                New to HorseCode?{" "}
                 <a href="#" className="text-blue-500">
                   Sign up for an account
                 </a>
