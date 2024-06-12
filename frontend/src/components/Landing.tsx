@@ -3,6 +3,7 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Features from './Features'
 import { Statistics } from './Statistics'
+import { Footer } from './Footer'
 
 export default function Landing() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -83,7 +84,10 @@ export default function Landing() {
           />
         </div>
         <Features />
+        <div className='border-b border-b-gray-200'></div>
         <Statistics />
+
+        <Footer />
       </div>
     </div>
   )
