@@ -16,13 +16,12 @@ export const ProblemList = ({
 
   return (
     // The first div sould probably be a reusable component for layouting
-    <div className="my-8">
-      <h1 className="text-bold text-4xl my-8 text-bold">All Problems</h1>
+    <div className="my-8 flex items-center justify-center h-screen">
       <div className="shadow-md bg-gray-50 px-4 py-4">
-        <div className="flex justify-between mb-8 font-semibold text-lg">
+        <div className="flex justify-between mb-8 font-semibold text-lg ">
           <div className="flex gap-8">
-            <div className="w-1/3 ">Id</div>
-            <div className="w-1/3">Problem Name</div>
+            <div className="w-1/3">ID</div>
+            <div className="w-1/3">Problem </div>
           </div>
           <div className="w-1/3">Recently Solved</div>
         </div>
@@ -42,7 +41,7 @@ export const ProblemList = ({
               </div>
             </div>
             <div className="w-1/3 text-lg">
-              <span className="text-gray-500">Last submission: </span>{" "}
+              <span className="text-gray-400">Last submission: </span>{" "}
               {"Anish"}
             </div>
           </div>
