@@ -4,25 +4,25 @@ const features = [
   {
     name: 'Push to deploy',
     description:
-      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
+      "Deploy your code effortlessly with our seamless integration. Experience smooth updates and rapid iterations.",
     icon: CloudArrowUpIcon,
   },
   {
     name: 'SSL certificates',
     description:
-      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
+      "Ensure your app's security with our SSL certificates. Protect your data and your users with our top-notch security features.",
     icon: LockClosedIcon,
   },
   {
     name: 'Simple queues',
     description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
+      "Manage your tasks efficiently with our intuitive queue system. Achieve better workflow and enhanced productivity.",
     icon: ArrowPathIcon,
   },
   {
     name: 'Advanced security',
     description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
+    "Protect your projects with our robust security features. Stay ahead of threats with cutting-edge technology.",
     icon: FingerPrintIcon,
   },
 ]
@@ -37,8 +37,7 @@ export default function Features() {
             Everything you need to deploy your app
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-            pulvinar et feugiat blandit at. In mi viverra elit nunc.
+          Achieve seamless integration with advanced features and intuitive design. Enhance productivity with efficient tools and robust support. 
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
