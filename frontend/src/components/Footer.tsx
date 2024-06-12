@@ -5,7 +5,7 @@ export const Footer = () => {
             <footer className=" text-center bg-transparent py-12 border-b border-b-slate-100">
                 <h2 className="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900">Start your free trial today</h2>
                 <p className="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">Try Landwind Platform for 30 days. No credit card required.</p>
-                <button className="bg-violet-500 rounded-lg p-4 shadow-lg hover:bg-violet-400 box-shadow: 8px 8px 16px #d1d5db, -8px -8px 16px #ffffff text-center;">
+                <button className="bg-violet-500 rounded-lg p-4 shadow-lg hover:bg-blue-400 box-shadow: 8px 8px 16px #d1d5db, -8px -8px 16px #ffffff text-center;">
                     <a href="www.google.com/" className="text-md text-white"> Free trial for 30 days </a>
                 </button>
             </footer>
