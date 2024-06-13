@@ -15,7 +15,7 @@ export const About = () => {
         opportunity to grow and every line of code brings us closer together.
         Happy coding!
       </p>
-      <p className="italic">
+      <p className="italic text-violet-800">
         "If code isn't a daily adventure, then what is?" - Horse Code Platform
       </p>
     </div>
