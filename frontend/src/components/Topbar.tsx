@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Topbar = () => {
   return (
@@ -26,8 +28,25 @@ const topbarItems = [
 ];
 
 function NavBar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="fixed w-full z-20 top-0 left-0 border-b border-gray-200">
+    <nav className={`fixed w-full z-20 top-0 left-0 border-b ${scrolled ? 'bg-white' : 'bg-transparent'} transition-colors duration-300`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://localhost:5173" className="flex items-center space-x-3">
           <img src="./vslogo.png" className="h-8" alt="Logo" />
@@ -60,6 +79,9 @@ function NavBar() {
     </nav>
   );
 }
+
+export default NavBar;
+
 
 function NavbarItem({ title, route } : {title: string, route: string}) {
   return (
